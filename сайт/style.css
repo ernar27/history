@@ -1,0 +1,486 @@
+/* Жалпы стиль */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  animation: pulsing 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+
+/* Фото стильдері */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  animation: fadeIn 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+
+/* Секциялар */
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Батырма */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0057a6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #003f7f;
+}
+
+/* Тест жауаптары */
+.correct {
+  background-color: #d4edda;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+}
+
+/* Анимациялар */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Медиа сұраныс (телефон/планшет) */
+@media (max-width: 768px) {
+  section {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/*
+
+The MIT License
+
+Copyright (c) 2025 0xERR0R - https://codepen.io/0xERR0R
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
+@import url(https://fonts.bunny.net/css?family=space-grotesk:300,400,500,600,700);
+
+:root {
+    --lemon-zest: #d7f20c;
+    --lilac-dream: #d285f2;
+    --off-white: #ebf2f0;
+    --crimson-red: #a60311;
+    --midnight-plum: #140826;
+}
+
+section {
+    background: var(--midnight-plum);
+}
+
+.brandsCarousel {
+    max-width: 60rem;
+    max-height: 6.25rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.brandsCarousel::before,
+.brandsCarousel::after {
+    content: "";
+    width: 6.25rem;
+    height: 6.25rem;
+    background: linear-gradient(to right, rgba(20, 8, 38, 1) 0%, rgba(20, 8, 38, 0) 100%);
+    position: absolute;
+    z-index: 2;
+}
+
+.brandsCarousel::before {
+    top: 0;
+    left: 0;
+}
+
+.brandsCarousel::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.carouselTrack {
+    width: calc(6.25rem * 20);
+    animation: infiniteLoop 10s linear infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.brandLogo {
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+.brandLogo svg {
+    fill: var(--lilac-dream);
+}
+
+@keyframes infiniteLoop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-6.25rem * 10), 0, 0);
+    }
+}
+
+.copyrightNotice {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--off-white);
+}
+
+#heartbeat {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    fill: var(--crimson-red);
+    animation: heartbeat .25s infinite alternate;
+}
+
+@keyframes heartbeat {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--lemon-zest);
+    position: relative;
+}
+
+a::after {
+    content: "";
+    width: 0;
+    height: 0.125rem;
+    left: 0;
+    bottom: 0;
+    transition: width .4s ease;
+    background: var(--lemon-zest);
+    position: absolute;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Lora, sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.settings {
+  position: fixed;
+  left: 1em; top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  
+  input {
+    padding: 0.5em;
+    background: #333;
+    font: inhrit;
+    color: #fff;
+  }
+}
+
+canvas {
+  width: 520px;
+  height: 520px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: #141414;
+}
+
+a-hole {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    display: block;
+    width: 150%;
+    height: 140%;
+
+    background: radial-gradient(ellipse at 50% 55%, transparent 10%, black 50%);
+    transform: translate3d(-50%, -50%, 0);
+
+    content: "";
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+      ellipse at 50% 75%,
+      #a900ff 20%,
+      transparent 75%
+    );
+    mix-blend-mode: overlay;
+    transform: translate3d(-50%, -50%, 0);
+
+    content: "";
+  }
+
+  @keyframes aura-glow {
+    0% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 0 300%;
+    }
+  }
+
+  .aura {
+    position: absolute;
+    top: -71.5%;
+    left: 50%;
+    z-index: 3;
+
+    width: 30%;
+    height: 140%;
+
+    background: linear-gradient(
+        20deg,
+        #00f8f1,
+        #ffbd1e20 16.5%,
+        #fe848f 33%,
+        #fe848f20 49.5%,
+        #00f8f1 66%,
+        #00f8f160 85.5%,
+        #ffbd1e 100%
+      )
+      0 100% / 100% 200%;
+    border-radius: 0 0 100% 100%;
+    filter: blur(50px);
+    mix-blend-mode: plus-lighter;
+    opacity: 0.75;
+    transform: translate3d(-50%, 0, 0);
+
+    animation: aura-glow 5s infinite linear;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 1px,
+      white 1px,
+      white 2px
+    );
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+  }
+
+  canvas {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
